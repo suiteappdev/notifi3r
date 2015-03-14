@@ -1,0 +1,6 @@
+ {  
+	"dbUrl"  : "localhost",
+	"dbUser" : "pilotos",
+	"dbPass" : "p1l0705",
+	"dbName"   : "pilotos"
+ }
