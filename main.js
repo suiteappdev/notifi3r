@@ -13,8 +13,8 @@ var server = restify.createServer({
 
 server.use(bodyParser());
 
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing 
+server.use(bodyParser.json()); // for parsing application/json
+server.use(bodyParser.urlencoded({ extended: true })); // for parsing 
 
 server.use(restify.queryParser());
 server.use(restify.gzipResponse());
