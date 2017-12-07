@@ -1,6 +1,6 @@
  {  
 	"dbUrl"  : "localhost",
-	"dbUser" : "pilotos",
-	"dbPass" : "p1l0705",
-	"dbName"   : "pilotos"
+	"dbUser" : "daimont*",
+	"dbPass" : "daimont2017*",
+	"dbName"   : "daimont_messaging"
  }
