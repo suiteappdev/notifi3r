@@ -40,7 +40,7 @@ mongoose.connection.on('open', function(ref){
         new require('./controllers/helloCtrl.js')(server);
         new require('./controllers/snsCtrl.js')(awsConf, server);
         
-        server.listen(8080);
+        server.listen(6060);
         
         
         });
