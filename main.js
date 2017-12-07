@@ -16,10 +16,6 @@ server.use(bodyParser());
 server.use(bodyParser.json()); // for parsing application/json
 server.use(bodyParser.urlencoded({ extended: true })); // for parsing 
 
-server.use(restify.queryParser());
-server.use(restify.gzipResponse());
-
-  
 //soporte de crossdomain
 server.pre(require('./utils/cross.domain'));
 
