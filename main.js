@@ -3,7 +3,7 @@ var awsModel= require('./models/aws.js');
 var mongoose = require('mongoose');
 var config = require('./config.json')
 var awsConf = undefined;
-
+var bodyParser = require('body-parser');
 
 var server = restify.createServer({  
   name: 'Pilotos',
@@ -11,10 +11,10 @@ var server = restify.createServer({
 
 
 
-server.use(restify.urlEncodedBodyParser({
-  mapParams: true
-}));
+server.use(bodyParser());
 
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing 
 
 server.use(restify.queryParser());
 server.use(restify.gzipResponse());
@@ -40,7 +40,7 @@ mongoose.connection.on('open', function(ref){
         new require('./controllers/helloCtrl.js')(server);
         new require('./controllers/snsCtrl.js')(awsConf, server);
         
-        server.listen(6060);
+        server.listen(6s06s0);
         
         
         });
